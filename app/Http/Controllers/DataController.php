@@ -378,5 +378,3 @@ class DataController extends Controller
         ->with('agenda', $agenda);
     }
 }
-
-

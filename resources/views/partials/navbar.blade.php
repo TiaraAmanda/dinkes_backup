@@ -6,8 +6,7 @@
                     <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Jl. Ahmad Yani 118 Surabaya
                         60231</small>
                     {{-- <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small> --}}
-                    <small class="text-light"><i
-                            class="fa fa-envelope-open me-2"></i>humas.dinkesjatim@gmail.com</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>humas.dinkesjatim@gmail.com</small>
                 </div>
             </div>
             <div class="header-waktu">
@@ -24,12 +23,15 @@
 
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     {{-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a> --}}
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/Dinas-Kesehatan-Provinsi-Jawa-Timur-307708009568386/?ref=br_rs"><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.facebook.com/Dinas-Kesehatan-Provinsi-Jawa-Timur-307708009568386/?ref=br_rs"><i
                             class="fab fa-facebook-f fw-normal"></i></a>
                     {{-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a> --}}
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/accounts/login/?next=/dinkesjatim/"><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.instagram.com/accounts/login/?next=/dinkesjatim/"><i
                             class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.youtube.com/channel/UCEYhBqGdIwlPLDsP11i8wCQ"><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                        href="https://www.youtube.com/channel/UCEYhBqGdIwlPLDsP11i8wCQ"><i
                             class="fab fa-youtube fw-normal"></i></a>
                 </div>
             </div>
@@ -60,7 +62,7 @@
                             <a href="/struktur-organisasi" class="dropdown-item">Struktur Organisasi</a>
                             <a href="/profil-pejabat" class="dropdown-item">Profil Pejabat</a>
                             <a href="/penghargaan" class="dropdown-item">Penghargaan</a>
-                            <a href="/maklumat" class="dropdown-item">Maklumat Pelayanan</a>
+                            <a href="#" class="dropdown-item">Maklumat Pelayanan</a>
 
                         </div>
                     </div>
@@ -69,24 +71,6 @@
                     <a href="/sitemap" class="nav-item nav-link">Sitemap</a>
                     <a href="/faq" class="nav-item nav-link">FAQ</a>
                     <a href="/kontak" class="nav-item nav-link">Kontak</a>
-                    {{-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="feature.html" class="dropdown-item">Our features</a>
-                        <a href="team.html" class="dropdown-item">Team Members</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                    </div>
-                </div> --}}
-                    {{-- <a href="contact.html" class="nav-item nav-link">Contact</a> --}}
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
                     data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
@@ -108,4 +92,3 @@
             </ul></a> --}}
             </div>
         </nav>
-

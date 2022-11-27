@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SurveyKepuasan extends Model
+class SurveyKepuasanWeb extends Model
 {
     use HasFactory;
 
-    protected $table = 'survey_kepuasan';
+    protected $table = 'kepuasanweb';
     protected $guarded = ['id'];
 
     protected $dates = [

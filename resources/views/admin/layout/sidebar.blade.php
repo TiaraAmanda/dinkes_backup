@@ -19,7 +19,7 @@
             </div>
             <ul class="nav nav-primary">
                 <li class="nav-item active">
-                    <a  href="/dashboard" aria-expanded="false">
+                    <a href="/dashboard" aria-expanded="false">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
 
@@ -178,9 +178,40 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/bank-data-spm">
-                        <i class="fas fa-folder"></i>
-                        <p>Bank Data (SPM)</p>
+                    <a data-toggle="collapse" href="#forms6">
+                        <i class="fas fa-pen-square"></i>
+                        <p>Survey</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="forms6">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="/survey/surveystrttk">
+                                    <span class="sub-item">Survey Kepuasan Pelayanan STRTTK</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/survey/surveypuskesmas">
+                                    <span class="sub-item">Survey Kepuasan Masyarakat</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Survey Kepuasan Website</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Survey Kebutuhan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-file-alt"></i>
+                        <p>Pelaporan Pelanggaran</p>
                     </a>
                 </li>
                 <li class="nav-section">

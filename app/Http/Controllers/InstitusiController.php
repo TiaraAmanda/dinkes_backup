@@ -9,6 +9,7 @@ use App\Models\Ppid;
 use App\Models\Institusi;
 use App\Models\LaporanMasyarakat;
 use App\Models\SurveyKepuasan;
+use App\Models\SurveyKepuasanWeb;
 use App\Models\SurveyPuskesmas;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
@@ -549,6 +550,13 @@ class InstitusiController extends Controller
         ->with('agenda', $agenda);
     }
 
+    public function surveystrttk(){
+
+        return view('admin.survey.surveystrttk', [
+            'survey_kepuasan' => SurveyKepuasan::all()
+        ]);
+    }
+
     public function kirimstrttk(Request $request){
 
         $validatedData = $request->validate([
@@ -582,6 +590,12 @@ class InstitusiController extends Controller
         ->with('agenda', $agenda);
     }
 
+    public function surveypuskesmas(){
+        return view('admin.survey.surveypuskesmas', [
+            'survey_puskesmas' => SurveyKepuasan::all()
+        ]);
+    }
+
     public function kirimpuskesmas(Request $request){
 
         $validatedData = $request->validate([
@@ -610,6 +624,22 @@ class InstitusiController extends Controller
 
         SurveyPuskesmas::create($validatedData);
         return redirect('/surveykepuasan/puskesmas')->with('success', 'Laporan Berhasil Dikirim');
+    }
+
+    public function surveykepuasanweb(){
+
+        $kabarsidebar = DB::table('post')->latest()->take(5)->get();
+        $agenda = DB::table('agenda')->latest()->take(5)->get();
+        return view('surveykepuasan.puskesmas', [
+            'halaman' => 'Survey Kepuasan',
+            'title' => 'Rekomendasi Puskesmas'
+        ])  ->with('kabarsidebar', $kabarsidebar)
+            ->with('agenda', $agenda);
+    }
+    public function kepuasanweb(){
+        return view('survey.kepuasanweb', [
+            'kepuasanweb' => SurveyKepuasanWeb::all()
+        ]);
     }
 
     public function penghargaan(){

@@ -27,6 +27,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // Front End Pengunjung
 
 Route::get('/beranda', [BerandaController::class, 'beranda']);
@@ -68,6 +69,7 @@ Route::get('/strttk', [InstitusiController::class, 'strttk']);
 Route::get('/surveykepuasan/puskesmas', [InstitusiController::class, 'puskesmas']);
 Route::post('/strttk/kirim', [InstitusiController::class, 'kirimstrttk']);
 Route::post('/surveykepuasan/puskesmas/kirim', [InstitusiController::class, 'kirimpuskesmas']);
+Route::post('/surveykepuasan/kepuasanweb', [InstitusiController::class, 'kepuasanweb']);
 
 Route::get('/upt-dinas-kesehatan', [BerandaController::class, 'upt']);
 Route::get('/dinas-kesehatan-kabkota',[BerandaController::class, 'dinkeskabkota']);
@@ -112,6 +114,13 @@ Route::prefix('/institusi')->group(function(){
     Route::post('/maklumat/halamanMaklumat', [InstitusiController::class, 'halamanMaklumat']);
 
 });
+
+// Route::prefix('/survey')->group(function(){
+    Route::get('/survey/surveystrttk', [InstitusiController::class, 'surveystrttk'])->middleware('auth');
+    Route::get('/survey/surveypuskesmas', [InstitusiController::class, 'surveypuskesmas'])->middleware('auth');
+// });
+
+
 
 Route::prefix('/profilpejabat')->group(function(){
     Route::get('/', [ProfilPejabatController::class, 'ProfilPejabat'])->middleware('auth');
@@ -267,5 +276,3 @@ Route::prefix('/konfig')->group(function(){
     Route::post('/popup/updatepopup', [KonfigurasiController::class, 'updatePopup'])->middleware('auth');
 
 });
-
-
