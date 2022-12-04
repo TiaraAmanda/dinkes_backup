@@ -37,47 +37,6 @@
                         <p>Institusi</p>
                     </a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a data-toggle="collapse" href="#forms">
-                        <i class="fas fa-pen-square"></i>
-                        <p>Institusi</p>
-                        <span class="caret"></span>
-                    </a>
-                    <div class="collapse" id="forms">
-                        <ul class="nav nav-collapse">
-                            <li>
-                                <a href="/institusi/visimisi">
-                                    <span class="sub-item">Visi Misi</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/institusi/tujuan">
-                                    <span class="sub-item">Tujuan</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/institusi/kebijakan">
-                                    <span class="sub-item">Kebijakan</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/institusi/struktur-organisasi">
-                                    <span class="sub-item">Struktur Organisasi</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/institusi/profil-pejabat">
-                                    <span class="sub-item">Profil Pejabat</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/institusi/call-center-covid">
-                                    <span class="sub-item">Call Center COVID-19</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li> --}}
                 <li class="nav-item">
                     <a data-toggle="collapse" href="#forms2">
                         <i class="fas fa-clipboard-list"></i>
@@ -196,12 +155,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <span class="sub-item">Survey Kepuasan Website</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                                <a href="/survey/surveykebutuhan">
                                     <span class="sub-item">Survey Kebutuhan</span>
                                 </a>
                             </li>
@@ -209,7 +163,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="/survey/pelaporan">
                         <i class="fas fa-file-alt"></i>
                         <p>Pelaporan Pelanggaran</p>
                     </a>

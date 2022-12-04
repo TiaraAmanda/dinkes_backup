@@ -198,25 +198,24 @@ class PostController extends Controller
         return response()->json(['slug' => $slug]);
     }
 
-    public function show($slug)
-    {
-    $post = Post::with(['comments', 'comments.child'])->where('slug', $slug)->first();
-    return view('tampilBerita', compact('post'));
+    public function show($slug){
+        $post = Post::with(['comments', 'comments.child'])->where('slug', $slug)->first();
+        return view('tampilBerita', compact('post'));
     }
 
-    public function comment(Request $request)
-    {
-    $this->validate($request, [
-    'username' => 'required',
-    'comment' => 'required'
-    ]);
-
-    Comment::create([
-    'post_id' => $request->id,
-    'parent_id' => $request->parent_id != '' ? $request->parent_id:NULL,
-    'username' => $request->username,
-    'comment' => $request->comment
-    ]);
-    return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
+    public function comment(Request $request){
+        $this->validate($request, [
+            'username' => 'required',
+            'comment' => 'required'
+        ]);
+        
+        Comment::create([
+            'post_id' => $request->id,
+            'parent_id' => $request->parent_id != '' ? $request->parent_id:NULL,
+            'username' => $request->username,
+            'comment' => $request->comment
+        ]);
+        
+        return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
     }
 }

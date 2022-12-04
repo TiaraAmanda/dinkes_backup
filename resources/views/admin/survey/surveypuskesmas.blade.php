@@ -18,52 +18,24 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
-                                            {{-- <th scope="col">Umur</th>
                                             <th scope="col">Nama</th>
-                                            <th scope="col">Tanggal</th>
-                                            <th scope="col">Instansi</th>
+                                            <th scope="col">instansi</th>
                                             <th scope="col">Jabatan</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">No.hp</th>
-                                            <th scope="col">Jenis Kelamin</th> --}}
-                                            <th scope="col">P1</th>
-                                            <th scope="col">P2</th>
-                                            <th scope="col">P3</th>
-                                            <th scope="col">P4</th>
-                                            <th scope="col">P5</th>
-                                            {{-- <th scope="col">P11</th> --}}
-                                            <th scope="col">P7</th>
-                                            <th scope="col">P8</th>
-                                            <th scope="col">P9</th>
-                                            <th scope="col">P10</th>
-                                            <th scope="col">Masukan</th>
-                                            <th scope="col">Saran Penyempurnaan</th>
+                                            <th scope="col">Data Masuk</th>
+                                            <th scope="col">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($survey_puskesmas as $item)
                                             <tr>
                                                 <td>{{ $item->id }}</td>
-                                                {{-- <td>{{ $item->umur }}</td>
                                                 <td>{{ $item->nama }}</td>
-                                                <td>{{ $item->tanggal }}</td>
                                                 <td>{{ $item->instansi }}</td>
                                                 <td>{{ $item->jabatan }}</td>
-                                                <td>{{ $item->email }}</td>
-                                                <td>{{ $item->nohp }}</td>
-                                                <td>{{ $item->jenis_kelamin }}</td> --}}
-                                                <td>{{ $item->pertanyaan1 }}</td>
-                                                <td>{{ $item->pertanyaan2 }}</td>
-                                                <td>{{ $item->pertanyaan3 }}</td>
-                                                <td>{{ $item->pertanyaan4 }}</td>
-                                                <td>{{ $item->pertanyaan5 }}</td>
-                                                {{-- <td>{{ $item->pertanyaan11 }}</td> --}}
-                                                <td>{{ $item->pertanyaan7 }}</td>
-                                                <td>{{ $item->pertanyaan8 }}</td>
-                                                <td>{{ $item->pertanyaan9 }}</td>
-                                                <td>{{ $item->pertanyaan10 }}</td>
-                                                <td>{{ $item->masukan }}</td>
-                                                <td>{{ $item->saranpenyempurnaan }}</td>
+                                                <td>{{ $item->created_at->diffForHumans() }}</td>
+                                                <td>
+                                                    <a href="\survey\{{ $item->id }}\survey-puskesmas">Detail</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

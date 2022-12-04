@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('survey_kepuasan', function (Blueprint $table) {
             $table->id();
             $table->string('kategori_survey');
+            $table->string('nama');
             $table->integer('umur');
             $table->string('jenis_kelamin');
             $table->string('pertanyaan2');

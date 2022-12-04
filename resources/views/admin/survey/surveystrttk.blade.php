@@ -18,36 +18,20 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
-                                            <th scope="col">P1</th>
-                                            <th scope="col">P2</th>
-                                            <th scope="col">P3</th>
-                                            <th scope="col">P4</th>
-                                            <th scope="col">P5</th>
-                                            <th scope="col">P6</th>
-                                            <th scope="col">P7</th>
-                                            <th scope="col">P8</th>
-                                            <th scope="col">P9</th>
-                                            <th scope="col">P10</th>
-                                            <th scope="col">Kritik Saran</th>
+                                            <th scope="col">Nama</th>
                                             <th scope="col">Data Masuk</th>
+                                            <th scope="col">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($survey_kepuasan as $item)
                                             <tr>
                                                 <td>{{ $item->id }}</td>
-                                                <td>{{ $item->jenis_kelamin }}</td>
-                                                <td>{{ $item->pertanyaan2 }}</td>
-                                                <td>{{ $item->pertanyaan3 }}</td>
-                                                <td>{{ $item->pertanyaan4 }}</td>
-                                                <td>{{ $item->pertanyaan5 }}</td>
-                                                <td>{{ $item->pertanyaan6 }}</td>
-                                                <td>{{ $item->pertanyaan7 }}</td>
-                                                <td>{{ $item->pertanyaan8 }}</td>
-                                                <td>{{ $item->pertanyaan9 }}</td>
-                                                <td>{{ $item->pertanyaan10 }}</td>
-                                                <td>{{ $item->kritiksaran }}</td>
+                                                <td>{{ $item->nama }}</td>
                                                 <td>{{ $item->created_at->diffForHumans() }}</td>
+                                                <td>
+                                                    <a href="\survey\{{ $item->id }}\survey-strttk">Detail</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

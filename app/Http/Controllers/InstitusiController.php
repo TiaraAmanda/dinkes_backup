@@ -11,6 +11,7 @@ use App\Models\LaporanMasyarakat;
 use App\Models\SurveyKepuasan;
 use App\Models\SurveyKepuasanWeb;
 use App\Models\SurveyPuskesmas;
+use App\Models\SurveyKebutuhan;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -515,6 +516,7 @@ class InstitusiController extends Controller
     }
 
     public function kirimlaporan(Request $request){
+        
 
         $validatedData = $request->validate([
             'nama' => 'required',
@@ -535,7 +537,22 @@ class InstitusiController extends Controller
         LaporanMasyarakat::create($validatedData);
 
         return redirect('/laporankontak')->with('success', 'Laporan Berhasil Dikirim');
+    }
 
+    public function pelaporan(){
+
+        return view('admin.survey.pelaporan', [
+            'laporan_masyarakat' => LaporanMasyarakat::all()
+        ]);
+    }
+
+    public function detailpelaporan(LaporanMasyarakat $laporan_masyarakat){
+
+        $laporan_masyarakat = DB::table('laporan_masyarakat')->where('id', $laporan_masyarakat->id)->get();
+        // dd($laporan_masyarakat);
+        return view('admin.survey.detailpelaporan', [
+            'laporan_masyarakat' => $laporan_masyarakat
+        ]);
     }
 
     public function strttk(){
@@ -557,10 +574,20 @@ class InstitusiController extends Controller
         ]);
     }
 
+    public function detailstrttk(SurveyKepuasan $survey_kepuasan){
+        
+        $survey_kepuasan = DB::table('survey_kepuasan')->where('id', $survey_kepuasan->id)->get();
+        
+        return view('admin.survey.detailstrttk', [
+            'survey_kepuasan' => $survey_kepuasan
+        ]);
+    }
+
     public function kirimstrttk(Request $request){
 
         $validatedData = $request->validate([
             'kategori_survey' => 'required',
+            'nama' => 'required',
             'umur' => 'required',
             'jenis_kelamin' => 'required',
             'pertanyaan2' => 'required',
@@ -592,7 +619,16 @@ class InstitusiController extends Controller
 
     public function surveypuskesmas(){
         return view('admin.survey.surveypuskesmas', [
-            'survey_puskesmas' => SurveyKepuasan::all()
+            'survey_puskesmas' => SurveyPuskesmas::all()
+        ]);
+    }
+
+    public function detailpuskesmas(SurveyPuskesmas $survey_puskesmas){
+
+        $survey_puskesmas = DB::table('survey_puskesmas')->where('id', $survey_puskesmas->id)->get();
+
+        return view('admin.survey.detailpuskesmas', [
+            'survey_puskesmas' => $survey_puskesmas
         ]);
     }
 
@@ -600,20 +636,21 @@ class InstitusiController extends Controller
 
         $validatedData = $request->validate([
             'kategori_survey' => 'required',
-            'umur' => 'required',
-            'nama' => 'required',
             'tanggal' => 'required',
+            'nama' => 'required',
+            'jenis_kelamin' => 'required',
+            'umur' => 'required',
+            'pendidikan' => 'required',
             'instansi' => 'required',
             'jabatan' => 'required',
             'email' => 'required',
             'nohp' => 'required',
-            'jenis_kelamin' => 'required',
             'pertanyaan1' => 'required',
             'pertanyaan2' => 'required',
             'pertanyaan3' => 'required',
             'pertanyaan4' => 'required',
             'pertanyaan5' => 'required',
-            'pertanyaan11' => 'required',
+            'pertanyaan6' => 'required',
             'pertanyaan7' => 'required',
             'pertanyaan8' => 'required',
             'pertanyaan9' => 'required',
@@ -641,19 +678,28 @@ class InstitusiController extends Controller
             }
         
     }
-    // public function addkepuasan(Request $kepuasanweb){
-    
 
-    // if(isset($kepuasanweb)){
-    //     if($kepuasanweb == 'puas'){
-    //         ($kepuasanweb->puas) == ($kepuasanweb->puas)+1;
-    //     }
-    // }
-    
-    // SurveyKepuasanWeb::add($kepuasanweb);
+    public function kirimkebutuhan(Request $request){
 
-    // return redirect('/surveykepuasan/kepuasanweb')->with('success');
-    // }
+        $validatedData = $request->validate([
+            // 'kategori_survey' => 'required',
+            'kebutuhan' => '',
+    ]);
+    
+    SurveyKebutuhan::create($validatedData);
+    return redirect('/kepuasanweb')->with('success', 'Kritik dan Saran Berhasil Dikirim');
+    
+    }
+    
+    public function surveykebutuhan(){
+        
+        return view('admin.survey.surveykebutuhan', [
+            'kebutuhan_web' => SurveyKebutuhan::all()
+        ]);
+    }
+
+
+    
 
     public function penghargaan(){
         $kabarsidebar = DB::table('post')->latest()->take(5)->get();

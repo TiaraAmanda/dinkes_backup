@@ -23,9 +23,9 @@ use App\Http\Controllers\NavController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
 // Front End Pengunjung
@@ -75,7 +75,8 @@ Route::get('/surveykepuasan/puskesmas', [InstitusiController::class, 'puskesmas'
 Route::get('/kepuasanweb', [InstitusiController::class, 'kepuasanweb']);
 Route::post('/strttk/kirim', [InstitusiController::class, 'kirimstrttk']);
 Route::post('/surveykepuasan/puskesmas/kirim', [InstitusiController::class, 'kirimpuskesmas']);
-Route::post('/kepuasanweb', [InstitusiController::class, 'kepuasanweb']);
+Route::post('/kepuasanweb/kirim', [InstitusiController::class, 'kirimkebutuhan']);
+
 
 Route::get('/upt-dinas-kesehatan', [BerandaController::class, 'upt']);
 Route::get('/dinas-kesehatan-kabkota',[BerandaController::class, 'dinkeskabkota']);
@@ -121,10 +122,15 @@ Route::prefix('/institusi')->group(function(){
 
 });
 
-// Route::prefix('/survey')->group(function(){
-    Route::get('/survey/surveystrttk', [InstitusiController::class, 'surveystrttk'])->middleware('auth');
-    Route::get('/survey/surveypuskesmas', [InstitusiController::class, 'surveypuskesmas'])->middleware('auth');
-// });
+Route::prefix('/survey')->group(function(){
+    Route::get('/surveystrttk', [InstitusiController::class, 'surveystrttk'])->middleware('auth');
+    Route::get('/{survey_kepuasan:id}/survey-strttk', [InstitusiController::class, 'detailstrttk']);
+    Route::get('/surveypuskesmas', [InstitusiController::class, 'surveypuskesmas'])->middleware('auth');
+    Route::get('/{survey_puskesmas:id}/survey-puskesmas', [InstitusiController::class, 'detailpuskesmas']);
+    Route::get('/pelaporan', [InstitusiController::class, 'pelaporan'])->middleware('auth');
+    Route::get('/{laporan_masyarakat:id}/pelaporan-pelanggaran', [InstitusiController::class, 'detailpelaporan']);
+    Route::get('/surveykebutuhan', [InstitusiController::class, 'surveykebutuhan'])->middleware('auth');
+});
 
 
 

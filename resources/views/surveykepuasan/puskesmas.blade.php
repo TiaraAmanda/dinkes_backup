@@ -33,10 +33,10 @@
                         <div class="mb-3">
                             <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label><br>
                             <input class="form-check-input" type="radio" id="lakilaki" name="jenis_kelamin"
-                                value="L">
+                                value="Laki Laki">
                             <label class="isilabel" for="lakilaki"> Laki Laki</label><br>
                             <input class="form-check-input" type="radio" id="perempuan" name="jenis_kelamin"
-                                value="P">
+                                value="Perempuan">
                             <label class="isilabel" for="perempuan"> Perempuan</label><br>
                         </div>
 
@@ -47,12 +47,15 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="pertanyaan2" class="form-label">Pendidikan Terkhir</label><br>
-                            <input class="form-check-input" type="radio" id="smf" name="pertanyaan2" value="1">
+                            <label for="pendidikan" class="form-label">Pendidikan Terakhir</label><br>
+                            <input class="form-check-input" type="radio" id="smf" name="pendidikan"
+                                value="SMF/SMK Farmasi">
                             <label class="isilabel" for="smf"> SMF/SMK Farmasi</label><br>
-                            <input class="form-check-input" type="radio" id="d3" name="pertanyaan2" value="2">
+                            <input class="form-check-input" type="radio" id="d3" name="pendidikan"
+                                value="Diploma III">
                             <label class="isilabel" for="d3"> Diploma III</label><br>
-                            <input class="form-check-input" type="radio" id="s1" name="pertanyaan2" value="3">
+                            <input class="form-check-input" type="radio" id="s1" name="pendidikan"
+                                value="Sarjana/Strata 1">
                             <label class="isilabel" for="s1"> Sarjana/Strata 1</label><br>
                         </div>
 
@@ -80,13 +83,13 @@
                         <div class="mb-3">
                             <label for="pertanyaan1" class="form-label">Jenis Layanan yang Diterima</label><br>
                             <input class="form-check-input" type="radio" id="satu" name="pertanyaan1"
-                                value="1">
+                                value="Registrasi Puskesmas Baru">
                             <label class="isilabel" for="satu"> Registrasi Puskesmas Baru</label><br>
                             <input class="form-check-input" type="radio" id="dua" name="pertanyaan1"
-                                value="2">
+                                value="Registrasi Ulang Puskesmas">
                             <label class="isilabel" for="dua"> Registrasi Ulang Puskesmas</label><br>
                             <input class="form-check-input" type="radio" id="tiga" name="pertanyaan1"
-                                value="3">
+                                value="Lainya">
                             <label class="isilabel" for="tiga"> Lainya</label><br>
                         </div>
 
@@ -94,16 +97,16 @@
                             <label for="pertanyaan2" class="form-label">Bagaimana pendapat Saudara tentang kesesuaian
                                 persyaratan pelayanan dengan jenis pelayanan</label><br>
                             <input class="form-check-input" type="radio" id="tidaksesuai" name="pertanyaan2"
-                                value="TS">
+                                value="Tidak Sesuai">
                             <label class="isilabel" for="tidaksesuai"> Tidak Sesuai</label><br>
                             <input class="form-check-input" type="radio" id="kurangsesuai" name="pertanyaan2"
-                                value="KS">
+                                value="Kurang Sesuai">
                             <label class="isilabel" for="kurangsesuai"> Kurang Sesuai</label><br>
                             <input class="form-check-input" type="radio" id="sesuai" name="pertanyaan2"
-                                value="S">
+                                value="Sesuai">
                             <label class="isilabel" for="sesuai"> Sesuai</label><br>
                             <input class="form-check-input" type="radio" id="sangatsesuai" name="pertanyaan2"
-                                value="SS">
+                                value="Sangat Sesuai">
                             <label class="isilabel" for="sangatsesuai"> Sangat Sesuai</label><br>
                         </div>
 
@@ -112,16 +115,16 @@
                                 prosedur pelayanannya
                             </label><br>
                             <input class="form-check-input" type="radio" id="tidakmudah" name="pertanyaan3"
-                                value="TM">
+                                value="Tidak Mudah">
                             <label class="isilabel" for="tidakmudah"> Tidak Mudah</label><br>
                             <input class="form-check-input" type="radio" id="kurangmudah" name="pertanyaan3"
-                                value="KM">
+                                value="Kurang Mudah">
                             <label class="isilabel" for="kurangmudah"> Kurang Mudah</label><br>
                             <input class="form-check-input" type="radio" id="mudah3" name="pertanyaan3"
-                                value="M">
+                                value="Mudah">
                             <label class="isilabel" for="mudah3"> Mudah</label><br>
                             <input class="form-check-input" type="radio" id="sangatmudah" name="pertanyaan3"
-                                value="SM">
+                                value="Sangat Mudah">
                             <label class="isilabel" for="sangatmudah"> Sangat Mudah</label><br>
                         </div>
 
@@ -129,16 +132,16 @@
                             <label for="pertanyaan4" class="form-label">Bagaimana pendapat Saudara tentang kecepatan waktu
                                 dalam memberikan pelayanan</label><br>
                             <input class="form-check-input" type="radio" id="tidakcepat" name="pertanyaan4"
-                                value="TC">
+                                value="Tidak Cepat">
                             <label class="isilabel" for="tidakcepat"> Tidak Cepat</label><br>
                             <input class="form-check-input" type="radio" id="kurangcepat" name="pertanyaan4"
-                                value="KC">
+                                value="Kurang Cepat">
                             <label class="isilabel" for="kurangcepat"> Kurang Cepat</label><br>
                             <input class="form-check-input" type="radio" id="cepat3" name="pertanyaan4"
-                                value="C">
+                                value="Cepat">
                             <label class="isilabel" for="cepat3"> Cepat</label><br>
                             <input class="form-check-input" type="radio" id="sangatcepat" name="pertanyaan4"
-                                value="SC">
+                                value="Sangat Cepat">
                             <label class="isilabel" for="sangatcepat"> Sangat Cepat</label><br>
                         </div>
 
@@ -146,102 +149,102 @@
                             <label for="pertanyaan5" class="form-label">Bagaimana pendapat Saudara tentang kewajaran
                                 biaya/ tarif dalam pelayanan</label><br>
                             <input class="form-check-input" type="radio" id="sangatmahal" name="pertanyaan5"
-                                value="SM">
+                                value="Sangat Mahal">
                             <label class="isilabel" for="sangatmahal"> Sangat Mahal</label><br>
                             <input class="form-check-input" type="radio" id="cukupmahal" name="pertanyaan5"
-                                value="CM">
+                                value="Cukup Mahal">
                             <label class="isilabel" for="cukupmahal"> Cukup Mahal</label><br>
                             <input class="form-check-input" type="radio" id="murah5" name="pertanyaan5"
-                                value="M">
+                                value="Murah">
                             <label class="isilabel" for="murah5"> Murah</label><br>
                             <input class="form-check-input" type="radio" id="gratis" name="pertanyaan5"
-                                value="G">
+                                value="Gratis">
                             <label class="isilabel" for="gratis"> Gratis</label><br>
                         </div>
 
                         <div class="mb-3">
-                            <label for="pertanyaan7" class="form-label">Bagaimana pendapat Saudara tentang kesesuaian
+                            <label for="pertanyaan6" class="form-label">Bagaimana pendapat Saudara tentang kesesuaian
                                 produk pelayanan antara yang tercantum dalam standar pelayanan dengan hasil yang
                                 diberikan</label><br>
-                            <input class="form-check-input" type="radio" id="tidaksesuai2" name="pertanyaan7"
-                                value="TS">
+                            <input class="form-check-input" type="radio" id="tidaksesuai2" name="pertanyaan6"
+                                value="Tidak Sesuai">
                             <label class="isilabel" for="tidaksesuai2"> Tidak Sesuai</label><br>
-                            <input class="form-check-input" type="radio" id="kurangsesuai2" name="pertanyaan7"
-                                value="KS">
+                            <input class="form-check-input" type="radio" id="kurangsesuai2" name="pertanyaan6"
+                                value="Kurang Sesuai">
                             <label class="isilabel" for="kurangsesuai2"> Kurang Sesuai</label><br>
-                            <input class="form-check-input" type="radio" id="sesuai2" name="pertanyaan7"
-                                value="S">
+                            <input class="form-check-input" type="radio" id="sesuai2" name="pertanyaan6"
+                                value="Sesuai">
                             <label class="isilabel" for="sesuai2"> Sesuai</label><br>
-                            <input class="form-check-input" type="radio" id="sangatsesuai2" name="pertanyaan7"
-                                value="SS">
+                            <input class="form-check-input" type="radio" id="sangatsesuai2" name="pertanyaan6"
+                                value="Sangat Sesuai">
                             <label class="isilabel" for="sangatsesuai2"> Sangat Sesuai</label><br>
                         </div>
 
                         <div class="mb-3">
-                            <label for="pertanyaan8" class="form-label">Bagaimana pendapat Saudara tentang kompetensi
+                            <label for="pertanyaan7" class="form-label">Bagaimana pendapat Saudara tentang kompetensi
                                 kemampuan petugas dalam pelayanan</label><br>
-                            <input class="form-check-input" type="radio" id="tidakkompeten" name="pertanyaan8"
-                                value="TK">
+                            <input class="form-check-input" type="radio" id="tidakkompeten" name="pertanyaan7"
+                                value="Tidak Kompeten">
                             <label class="isilabel" for="tidakkompeten"> Tidak Kompeten</label><br>
-                            <input class="form-check-input" type="radio" id="kurangkompeten" name="pertanyaan8"
-                                value="KK">
+                            <input class="form-check-input" type="radio" id="kurangkompeten" name="pertanyaan7"
+                                value="Kurang Kompeten">
                             <label class="isilabel" for="kurangkompeten"> Kurang Kompeten</label><br>
-                            <input class="form-check-input" type="radio" id="kompeten8" name="pertanyaan8"
-                                value="K">
+                            <input class="form-check-input" type="radio" id="kompeten8" name="pertanyaan7"
+                                value="Kompeten">
                             <label class="isilabel" for="kompeten8"> Kompeten</label><br>
-                            <input class="form-check-input" type="radio" id="sangatkompeten" name="pertanyaan8"
-                                value="SK">
+                            <input class="form-check-input" type="radio" id="sangatkompeten" name="pertanyaan7"
+                                value="Sangat Kompeten">
                             <label class="isilabel" for="sangatkompeten"> Sangat Kompeten</label><br>
                         </div>
 
                         <div class="mb-3">
-                            <label for="pertanyaan9" class="form-label">Bagaimana pendapat Saudara tentang perilaku
+                            <label for="pertanyaan8" class="form-label">Bagaimana pendapat Saudara tentang perilaku
                                 petugas dalam pelayanan terkait kesopanan dan keramahan</label><br>
-                            <input class="form-check-input" type="radio" id="tidaksopanramah" name="pertanyaan9"
-                                value="TSR">
+                            <input class="form-check-input" type="radio" id="tidaksopanramah" name="pertanyaan8"
+                                value="Tidak Sopan dan Ramah">
                             <label class="isilabel" for="tidaksopanramah"> Tidak Sopan dan Ramah</label><br>
-                            <input class="form-check-input" type="radio" id="kurangsopanramah" name="pertanyaan9"
-                                value="KSR">
+                            <input class="form-check-input" type="radio" id="kurangsopanramah" name="pertanyaan8"
+                                value="Kurang Sopan dan Ramah">
                             <label class="isilabel" for="kurangsopanramah"> Kurang Sopan dan Ramah</label><br>
-                            <input class="form-check-input" type="radio" id="sopanramah" name="pertanyaan9"
-                                value="SR">
+                            <input class="form-check-input" type="radio" id="sopanramah" name="pertanyaan8"
+                                value="Sopan Ramah">
                             <label class="isilabel" for="sopanramah"> Sopan Ramah</label><br>
-                            <input class="form-check-input" type="radio" id="sangatsopanramah" name="pertanyaan9"
-                                value="SSR">
+                            <input class="form-check-input" type="radio" id="sangatsopanramah" name="pertanyaan8"
+                                value="Sangat Sopan dan Ramah">
                             <label class="isilabel" for="sangatsopanramah"> Sangat Sopan dan Ramah</label><br>
                         </div>
 
                         <div class="mb-3">
-                            <label for="pertanyaan10" class="form-label">Bagaimana pendapat Saudara tentang kualitas
+                            <label for="pertanyaan9" class="form-label">Bagaimana pendapat Saudara tentang kualitas
                                 sarana dan prasarana</label><br>
-                            <input class="form-check-input" type="radio" id="buruk" name="pertanyaan10"
-                                value="BR">
+                            <input class="form-check-input" type="radio" id="buruk" name="pertanyaan9"
+                                value="Buruk">
                             <label class="isilabel" for="buruk"> Buruk</label><br>
-                            <input class="form-check-input" type="radio" id="cukup" name="pertanyaan10"
-                                value="CK">
+                            <input class="form-check-input" type="radio" id="cukup" name="pertanyaan9"
+                                value="Cukup">
                             <label class="isilabel" for="cukup"> Cukup</label><br>
-                            <input class="form-check-input" type="radio" id="baik" name="pertanyaan10"
-                                value="BK">
+                            <input class="form-check-input" type="radio" id="baik" name="pertanyaan9"
+                                value="Baik">
                             <label class="isilabel" for="baik"> Baik</label><br>
-                            <input class="form-check-input" type="radio" id="sangatbaik" name="pertanyaan10"
-                                value="SB">
+                            <input class="form-check-input" type="radio" id="sangatbaik" name="pertanyaan9"
+                                value="Sangat Baik">
                             <label class="isilabel" for="sangatbaik"> Sangat Baik</label><br>
                         </div>
 
                         <div class="mb-3">
-                            <label for="pertanyaan11" class="form-label">Bagaimana pendapat Saudara tentang penanganan
+                            <label for="pertanyaan10" class="form-label">Bagaimana pendapat Saudara tentang penanganan
                                 pengaduan pengguna layanan</label><br>
-                            <input class="form-check-input" type="radio" id="tidakada" name="pertanyaan11"
-                                value="T">
+                            <input class="form-check-input" type="radio" id="tidakada" name="pertanyaan10"
+                                value="Tidak Ada">
                             <label class="isilabel" for="tidakada"> Tidak Ada</label><br>
-                            <input class="form-check-input" type="radio" id="adattb" name="pertanyaan11"
-                                value="ATB">
+                            <input class="form-check-input" type="radio" id="adattb" name="pertanyaan10"
+                                value="Ada Tetapi Tidak Berfungsi">
                             <label class="isilabel" for="adattb"> Ada Tetapi Tidak Berfungsi</label><br>
-                            <input class="form-check-input" type="radio" id="berfungsikm" name="pertanyaan11"
-                                value="BKM">
+                            <input class="form-check-input" type="radio" id="berfungsikm" name="pertanyaan10"
+                                value="Berfungsi Kurang Maksimal">
                             <label class="isilabel" for="berfungsikm"> Berfungsi Kurang Maksimal</label><br>
-                            <input class="form-check-input" type="radio" id="dikeloladb" name="pertanyaan11"
-                                value="DDB">
+                            <input class="form-check-input" type="radio" id="dikeloladb" name="pertanyaan10"
+                                value="Dikelola Dengan Baik">
                             <label class="isilabel" for="dikeloladb"> Dikelola Dengan Baik</label><br>
                         </div>
                         <div class="mb-3">
